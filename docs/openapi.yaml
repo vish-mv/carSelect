@@ -1,0 +1,120 @@
+openapi: 3.0.0
+info:
+  title: Random Vehicle API
+  description: An API that returns random vehicles from different categories
+  version: 1.0.0
+  
+servers:
+  - url: http://localhost:8000
+    description: Development server
+
+paths:
+  /:
+    get:
+      summary: Root endpoint
+      description: Returns welcome message and available endpoints
+      operationId: root
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Welcome to the Random Vehicle API"
+                  available_endpoints:
+                    type: array
+                    items:
+                      type: string
+                    example: ["/cars", "/bikes", "/hatchbacks", "/suvs", "/pickups"]
+
+  /cars:
+    get:
+      summary: Get random car
+      description: Returns a random car from the available list
+      operationId: get_random_car
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  random_car:
+                    type: string
+                    example: "Toyota Camry"
+
+  /bikes:
+    get:
+      summary: Get random bike
+      description: Returns a random motorcycle from the available list
+      operationId: get_random_bike
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  random_bike:
+                    type: string
+                    example: "Harley-Davidson Street Glide"
+
+  /hatchbacks:
+    get:
+      summary: Get random hatchback
+      description: Returns a random hatchback from the available list
+      operationId: get_random_hatchback
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  random_hatchback:
+                    type: string
+                    example: "Volkswagen Golf"
+
+  /suvs:
+    get:
+      summary: Get random SUV
+      description: Returns a random SUV from the available list
+      operationId: get_random_suv
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  random_suv:
+                    type: string
+                    example: "Toyota RAV4"
+
+  /pickups:
+    get:
+      summary: Get random pickup
+      description: Returns a random pickup truck from the available list
+      operationId: get_random_pickup
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  random_pickup:
+                    type: string
+                    example: "Ford F-150"
+
+components:
+  schemas: {}
