@@ -4,7 +4,7 @@ from random import choice
 app = FastAPI()
 
 # Sample vehicle brand lists
-cars = ["Toyota Camry", "Toyota Corolla", "Honda Civic", "Honda Accord", "Ford Mustang", "Ford Focus", 
+cars = ["Toyota Camry", "Honda Civic", "Honda Accord", "Ford Mustang", "Ford Focus", 
         "BMW 3 Series", "BMW X5", "Mercedes C-Class", "Mercedes E-Class", "Audi A4", "Audi Q5", 
         "Volkswagen Passat", "Volkswagen Jetta", "Hyundai Elantra", "Hyundai Sonata", "Chevrolet Malibu",
         "Chevrolet Cruze", "Nissan Altima", "Nissan Maxima", "Kia Optima", "Kia Forte", "Mazda3", "Mazda6",
